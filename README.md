@@ -1,10 +1,7 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## How to run
 
-## Available Scripts
-
-In the project directory, you can run:
+To start the application run:
 
 ### `npm start`
 
@@ -16,5 +13,4 @@ You will also see any lint errors in the console.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The test files do not contain any real tests. I am merely showing you how I would structure the application alongside each component.

@@ -25,6 +25,7 @@ const Settings = () => {
             <h1 className="text-[24px] md:text-[30px] font-[500px]">
               Settings
             </h1>
+
             <p className="font-light text-textColor text-[16px]">
               Manage your team and preferences here.
             </p>
@@ -49,7 +50,7 @@ const Settings = () => {
               </div>
             </Tab.List>
 
-            <Tab.Panels className={"w-full block"}>
+            <Tab.Panels className={"w-full"}>
               <Tab.Panel>
                 <MyDetails />
               </Tab.Panel>
