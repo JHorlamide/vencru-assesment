@@ -57,7 +57,7 @@ const CardDetails = () => {
               <div className="">
                 <CustomInput
                   id="card"
-                  className=""
+                  className="focus:ring-red-500 dark:focus:ring-red-600"
                   inputProps={{
                     type: "radio",
                   }}

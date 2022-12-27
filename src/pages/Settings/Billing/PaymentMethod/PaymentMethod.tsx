@@ -4,7 +4,7 @@ import MailIcon from "../../../../assets/icons/mail_icon.png";
 const PaymentMethod = () => {
   return (
     <section>
-      <div className="pb-2 space-y-1 md:pb-0">
+      <div className="pb-2 space-y-1 md:pb-3">
         <h1 className="text-[18px] font-[500px]">Payment method</h1>
         
         <p className="font-[400px] text-textColor text-[14px] md:text-[16px]">
