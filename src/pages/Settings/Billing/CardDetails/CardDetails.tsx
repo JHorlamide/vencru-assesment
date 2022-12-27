@@ -1,18 +1,7 @@
-import { useState } from "react";
-import CustomInput from "../../../../components/CustomInput/CustomInput";
-import VisaCard from "../../../../assets/images/visa_card.png";
-import MasterCard from "../../../../assets/images/master_card.png";
 import PlusIcon from "../../../../assets/icons/plus_icon.png";
-import Card from "./Card/Card";
-import { CARD_DETAILS } from "../../../../components/data";
+import { MasterCard, VisaCard } from "../CardDetails/Card/Card";
 
 const CardDetails = () => {
-  const [masterCard, setMasterCard] = useState(false);
-
-  const handleMasterCardChange = () => {
-    setMasterCard(true);
-  };
-
   return (
     <section className="">
       <hr className="w-full" />
@@ -26,16 +15,8 @@ const CardDetails = () => {
         </div>
 
         <div className="col-span-8 space-y-5">
-          {CARD_DETAILS.map((item) => (
-            <Card
-              image={item.image}
-              color={item.color}
-              bgColor={item.bgColor}
-              setCard={() => console.log("I was clicked")}
-              expiryDate={item.expiryDate}
-              headingText={item.headingText}
-            />
-          ))}
+          <VisaCard />
+          <MasterCard />
 
           <div className="flex space-x-2 cursor-pointer">
             <img src={PlusIcon} alt="plus_icon" className="w-4 h-4" />

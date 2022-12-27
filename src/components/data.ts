@@ -141,22 +141,3 @@ export const TABLE_HEADING: TableHeading[] = [
     title: "Users on plan",
   },
 ]
-
-export const CARD_DETAILS = [
-  {
-    id: 1,
-    color: "purple",
-    image: VisCard,
-    bgColor: "lightPurple",
-    headingText: "Visa ending in 1234",
-    expiryDate: "Expiry 06/2024"
-  },
-  {
-    id: 2,
-    image: MasterCard,
-    color: "gray",
-    bgColor: "white",
-    headingText: "Mastercard ending in 1234",
-    expiryDate: "Expiry 06/2024"
-  },
-]
