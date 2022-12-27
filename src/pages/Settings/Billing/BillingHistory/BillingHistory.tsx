@@ -8,8 +8,8 @@ import { Fragment } from "react";
 const BillingHistoryTable = () => {
   return (
     <div className="flex mt-5 overflow-x-scroll md:overflow-x-hidden no-scrollbar">
-      <table className="min-w-full divide-y divide-gray-200 table-fixed">
-        <thead className="bg-gray-100 border rounded-lg dark:bg-red-200">
+      <table className="min-w-full divide-y divide-gray-200 rounded-md table-fixed">
+        <thead className="bg-gray-100 dark:bg-gray-100">
           <tr className="overflow-x-scroll scroll-smooth md:overflow-hidden">
             <th scope="col" className="p-3">
               <div className="flex items-center">
