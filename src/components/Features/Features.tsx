@@ -16,7 +16,7 @@ const Features = () => {
         <img
           src={PLAY_BUTTON}
           alt="play_icon"
-          className="absolute bottom-0 w-10 left-5"
+          className="absolute bottom-0 w-10 cursor-pointer left-5"
         />
       </div>
 

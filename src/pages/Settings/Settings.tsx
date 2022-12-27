@@ -25,7 +25,7 @@ const Settings = () => {
             <h1 className="text-[24px] md:text-[30px] font-[500px]">
               Settings
             </h1>
-            <p className="font-[400px] text-textColor text-[16px]">
+            <p className="font-light text-textColor text-[16px]">
               Manage your team and preferences here.
             </p>
           </div>

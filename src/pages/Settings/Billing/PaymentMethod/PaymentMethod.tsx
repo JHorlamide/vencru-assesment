@@ -6,18 +6,18 @@ const PaymentMethod = () => {
     <section>
       <div className="pb-2 space-y-1 md:pb-3">
         <h1 className="text-[18px] font-[500px]">Payment method</h1>
-        
-        <p className="font-[400px] text-textColor text-[14px] md:text-[16px]">
+
+        <p className="font-light text-textColor text-[14px] md:text-[16px]">
           Update your billing details and address
         </p>
       </div>
 
       <hr className="w-full" />
 
-      <div className="flex flex-col pt-2 gap-x-0 md:grid md:grid-cols-12">
+      <div className="flex flex-col pt-4 gap-x-0 md:grid md:grid-cols-12">
         <div className="col-span-4">
           <h1 className="text-[14px] font-[500px]">Contact email</h1>
-          <p className="font-[14px] text-textColor text-[16px]">
+          <p className="font-light text-textColor text-[16px]">
             Where should invoices be sent?
           </p>
         </div>
@@ -64,7 +64,7 @@ const PaymentMethod = () => {
                 </label>
                 <CustomInput
                   id="email"
-                  className="relative text-[16px] font-[400px] text-gray-900 w-full py-1.5 border border-gray300 px-8 rounded-md"
+                  className="relative text-[16px] font-[400px] text-gray-900 w-full py-1.5 md:py-2.5 md:w-[448px] border border-gray300 px-12 rounded-[8px]"
                   inputProps={{
                     type: "text",
                     placeholder: "Enter you email",
@@ -76,7 +76,7 @@ const PaymentMethod = () => {
                 <img
                   src={MailIcon}
                   alt="mail-icon"
-                  className="absolute mt-8 ml-2"
+                  className="absolute px-5 mt-9"
                 />
               </div>
             </div>
