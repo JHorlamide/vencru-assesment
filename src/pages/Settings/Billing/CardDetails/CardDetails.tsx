@@ -1,7 +1,19 @@
+import { useState } from "react";
 import PlusIcon from "../../../../assets/icons/plus_icon.png";
+import CustomBtn from "../../../../components/CustomBtn/CustomBtn";
 import { MasterCard, VisaCard } from "../CardDetails/Card/Card";
+import AddPaymentMethod from "./AddPaymentMethod/AddPaymentMethod";
 
 const CardDetails = () => {
+  let [isOpen, setIsOpen] = useState(false);
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+
+  function openModal() {
+    setIsOpen(true);
+  }
   return (
     <section className="">
       <hr className="w-full" />
@@ -17,13 +29,17 @@ const CardDetails = () => {
         <div className="col-span-8 space-y-5">
           <VisaCard />
           <MasterCard />
+          <AddPaymentMethod isOpen={isOpen} closeModal={closeModal} />
 
-          <div className="flex space-x-2 cursor-pointer">
-            <img src={PlusIcon} alt="plus_icon" className="w-4 h-4" />
-            <a href="/add-payment-method" className="text-[14px] text-gray-500">
-              Add new payment method
-            </a>
-          </div>
+          <CustomBtn
+            leftIcon={
+              <img src={PlusIcon} alt="plus_icon" className="w-4 h-4 mt-1 mr-2" />
+            }
+            className="flex"
+            onClick={openModal}
+          >
+            Add new payment method
+          </CustomBtn>
         </div>
       </div>
     </section>
