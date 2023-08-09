@@ -8,7 +8,7 @@ import { NAV_LINKS } from "../data";
 
 const Sidebar = () => {
   return (
-    <div className="px-5 py-5 space-y-3 overflow-y-auto">
+    <div className="w-1/2 md:w-1/5 px-3 py-4 space-y-3 h-screen fixed top-0 left-0">
       <div className="space-y-3">
         <Logo />
 

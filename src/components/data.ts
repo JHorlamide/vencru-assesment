@@ -141,3 +141,22 @@ export const TABLE_HEADING: TableHeading[] = [
     title: "Users on plan",
   },
 ]
+
+
+export const testData = [
+  {
+    id: "Basic Plan – Dec 2022",
+    name: 'USD $10.00',
+    age: "Dec 1, 2022",
+    email: 'john@example.com',
+    img: "https://demos.creative-tim.com/notus-js/assets/img/team-1-800x800.jpg"
+  },
+
+  {
+    id: "Basic Plan – Dec 2022",
+    name: 'USD $10.00',
+    age: "Dec 1, 2022",
+    email: 'jane@example.com',
+    img: "https://demos.creative-tim.com/notus-js/assets/img/team-2-800x800.jpg"
+  },
+];

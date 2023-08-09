@@ -4,13 +4,14 @@ import CheckMarkIcon from "../../../../assets/icons/check_icon.png";
 import { TABLE_HEADING } from "../../../../components/data";
 import CustomInput from "../../../../components/CustomInput/CustomInput";
 import { Fragment } from "react";
+import { ResponsiveTable } from "../ResponsiveTable";
 
 const BillingHistoryTable = () => {
   return (
-    <div className="flex mt-5 overflow-x-scroll md:overflow-x-hidden no-scrollbar">
-      <table className="min-w-full divide-y divide-gray-200 rounded-md table-fixed">
+    <div className="overflow-x-auto">
+      <table className="sm:min-w-max md:min-w-full">
         <thead className="bg-gray-100 dark:bg-gray-100">
-          <tr className="overflow-x-scroll scroll-smooth md:overflow-hidden">
+          <tr>
             <th scope="col" className="p-3">
               <div className="flex items-center">
                 <CustomInput
@@ -60,7 +61,7 @@ const BillingHistoryTable = () => {
 
         <tbody className="bg-white divide-y divide-gray-100 dark:divide-gray-200">
           {[1, 2, 3, 4, 5, 6, 7].map((item, idx) => (
-            <tr key={idx} className="">
+            <tr key={idx}>
               <td className="w-4 p-3">
                 <div className="flex items-center">
                   <CustomInput
@@ -78,24 +79,22 @@ const BillingHistoryTable = () => {
               </td>
 
               <td className="px-3 md:px-0 py-3 text-[14px] font-[500px] text-black whitespace-nowrap">
-                Basic Plan – Dec 2022
+                <div className="truncate w-32 md:w-72">
+                  Basic Plan – Dec 2022
+                </div>
               </td>
 
               <td className="px-3 md:px-0 py-3 text-[14px] font-[400px] text-gray-500 whitespace-nowrap">
-                USD $10.00
+                <div className="truncate w-20">USD $10.00</div>
               </td>
 
               <td className="px-3 md:px-0 py-3 text-[14px] font-[400px] text-gray-500 whitespace-nowrap">
-                Dec 1, 2022
+                <div className="truncate w-20">Dec 1, 2022</div>
               </td>
 
               <td className="px-3 py-3 text-sm font-medium text-black md:px-0 whitespace-nowrap dark:text-black">
-                <div className="flex px-2.5 space-x-1 text-green-700 rounded-full w-fit bg-green-50">
-                  <img
-                    src={CheckMarkIcon}
-                    alt="check_mark_icon"
-                    className="w-[8] h-[5.5px] mt-2"
-                  />
+                <div className="flex px-2.5 space-x-1 text-green-700 truncate rounded-full w-fit bg-green-50">
+                  <img src={CheckMarkIcon} alt="check_mark_icon" className="w-[8] h-[5.5px] mt-2" />
                   <p className="text-[12px] font-[500px]">Paid</p>
                 </div>
               </td>
@@ -155,21 +154,7 @@ const BillingHistory = () => {
       </div>
 
       <BillingHistoryTable />
-
-      {/* <div className="mt-5">
-        <div className="flex flex-col overflow-x-hidden">
-          <div className="w-full overflow-x-auto shadow-md sm:rounded-lg no-scrollbar">
-            <div className="inline-block min-w-full align-middle">
-              <div className="overflow-hidden">
-               
-                
-
-                
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
+      <ResponsiveTable />
     </Fragment>
   );
 };
