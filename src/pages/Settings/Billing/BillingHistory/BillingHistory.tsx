@@ -9,51 +9,33 @@ import { ResponsiveTable } from "../ResponsiveTable";
 const BillingHistoryTable = () => {
   return (
     <div className="overflow-x-auto">
-      <table className="sm:min-w-max md:min-w-full">
+      <table className="min-w-full">
         <thead className="bg-gray-100 dark:bg-gray-100">
           <tr>
-            <th scope="col" className="p-3">
-              <div className="flex items-center">
-                <CustomInput
-                  id="checkbox-all"
-                  className="w-4 h-4 bg-gray-100 border-gray-300 rounded-full focus:ring-red-500 dark:focus:ring-red-600"
-                  inputProps={{
-                    type: "checkbox",
-                  }}
-                />
-
-                <label htmlFor="checkbox-all" className="sr-only">
-                  checkbox
-                </label>
-              </div>
+            <th scope="col" className="pl-3 md:pl-3">
+              <CustomInput
+                id="checkbox-all"
+                className="w-4 h-4 bg-gray-100 border-gray-300 rounded-full"
+                inputProps={{ type: "checkbox" }}
+              />
             </th>
 
-            {
-              <th
-                key={TABLE_HEADING[0].id}
-                scope="col"
-                className="flex px-1 py-3 text-[12px] font-medium tracking-wider text-left text-gray-500 w-52 md:w-72 whitespace-nowrap"
-              >
-                {TABLE_HEADING[0].title}
+            <th scope="col">
+              <div className="flex px-1 py-3 text-[12px] font-medium tracking-wider text-left text-gray-500 whitespace-nowrap">
+                Invoice
                 <img
                   src={TABLE_HEADING[0].icon}
                   alt="arrow_down"
                   className="w-[10.33px] h-[10.33px] mt-1 ml-1"
                 />
-              </th>
-            }
+              </div>
+            </th>
 
-            {TABLE_HEADING.slice(1).map((item) => (
-              <th
-                key={item.id}
-                scope="col"
-                className="px-3 md:px-1 py-3 text-[12px] font-medium tracking-wider text-left text-gray-500 whitespace-nowrap"
-              >
-                {item.title}
-              </th>
-            ))}
-
-            <th scope="col" className="p-4">
+            <th scope="col" className="px-2 md:px-1 py-3 text-[12px] font-medium tracking-wider text-left text-gray-500 whitespace-nowrap">Amount</th>
+            <th scope="col" className="px-2 md:px-1 py-3 text-[12px] font-medium tracking-wider text-left text-gray-500 whitespace-nowrap">Date</th>
+            <th scope="col" className="px-2 md:px-1 py-3 text-[12px] font-medium tracking-wider text-left text-gray-500 whitespace-nowrap">Status</th>
+            <th scope="col" className="px-2 md:px-1 py-3 text-[12px] font-medium tracking-wider text-left text-gray-500 whitespace-nowrap">Users on plan</th>
+            <th scope="col" className="hidden md:block p-4">
               <span className="sr-only">Edit</span>
             </th>
           </tr>
@@ -62,36 +44,17 @@ const BillingHistoryTable = () => {
         <tbody className="bg-white divide-y divide-gray-100 dark:divide-gray-200">
           {[1, 2, 3, 4, 5, 6, 7].map((item, idx) => (
             <tr key={idx}>
-              <td className="w-4 p-3">
-                <div className="flex items-center">
-                  <CustomInput
-                    id="checkbox-table-1"
-                    className="w-4 h-4 bg-gray-100 border-gray-300 rounded-full focus:ring-red-500 dark:focus:ring-red-600"
-                    inputProps={{
-                      type: "checkbox",
-                    }}
-                  />
-
-                  <label htmlFor="checkbox-table-1" className="sr-only">
-                    checkbox
-                  </label>
-                </div>
+              <td className="pl-3 md:pl-3">
+                <CustomInput
+                  id="checkbox-all"
+                  className="w-4 h-4 bg-gray-100 border-gray-300 rounded-full"
+                  inputProps={{ type: "checkbox" }}
+                />
               </td>
 
-              <td className="px-3 md:px-0 py-3 text-[14px] font-[500px] text-black whitespace-nowrap">
-                <div className="truncate w-32 md:w-72">
-                  Basic Plan – Dec 2022
-                </div>
-              </td>
-
-              <td className="px-3 md:px-0 py-3 text-[14px] font-[400px] text-gray-500 whitespace-nowrap">
-                <div className="truncate w-20">USD $10.00</div>
-              </td>
-
-              <td className="px-3 md:px-0 py-3 text-[14px] font-[400px] text-gray-500 whitespace-nowrap">
-                <div className="truncate w-20">Dec 1, 2022</div>
-              </td>
-
+              <td className="px-3 md:px-0 py-3 text-[14px] font-[500px] text-black whitespace-nowrap">Basic Plan – Dec 2022</td>
+              <td className="px-3 md:px-0 py-3 text-[14px] font-[400px] text-gray-500 whitespace-nowrap">USD $10.00</td>
+              <td className="px-3 md:px-0 py-3 text-[14px] font-[400px] text-gray-500 whitespace-nowrap">Dec 1, 2022</td>
               <td className="px-3 py-3 text-sm font-medium text-black md:px-0 whitespace-nowrap dark:text-black">
                 <div className="flex px-2.5 space-x-1 text-green-700 truncate rounded-full w-fit bg-green-50">
                   <img src={CheckMarkIcon} alt="check_mark_icon" className="w-[8] h-[5.5px] mt-2" />
@@ -154,7 +117,7 @@ const BillingHistory = () => {
       </div>
 
       <BillingHistoryTable />
-      <ResponsiveTable />
+      {/* <ResponsiveTable /> */}
     </Fragment>
   );
 };
